@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: CompetitionManageSystem
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
