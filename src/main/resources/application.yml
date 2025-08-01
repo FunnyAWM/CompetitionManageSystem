@@ -3,3 +3,17 @@ spring:
     name: CompetitionManageSystem
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/cms
+    username: funnyawm
+    password: 041128
+  ai:
+    openai:
+      base-url: https://api.siliconflow.cn/
+      api-key: "*******"
+      chat:
+        options:
+          temperature: 0.8
+          model: deepseek-ai/DeepSeek-R1
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug
