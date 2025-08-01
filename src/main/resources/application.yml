@@ -9,7 +9,7 @@ spring:
   ai:
     openai:
       base-url: https://api.siliconflow.cn/
-      api-key: "*******"
+      api-key: "*******" # 实际使用时更换为自己的硅基流动API密钥
       chat:
         options:
           temperature: 0.8
