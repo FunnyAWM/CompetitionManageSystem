@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # 使用宿主机的 MariaDB
+      SPRING_DATASOURCE_URL: jdbc:mariadb://host.docker.internal:3306/cms
+      SPRING_DATASOURCE_USERNAME: funnyawm
+      SPRING_DATASOURCE_PASSWORD: 041128
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
