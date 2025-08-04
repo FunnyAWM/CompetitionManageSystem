@@ -2,5 +2,5 @@
 DROP DATABASE IF EXISTS cms;
 CREATE DATABASE cms;
 USE cms;
-CREATE USER 'funnyawm'@'localhost' IDENTIFIED BY '041128';
-GRANT ALL PRIVILEGES ON cms.* TO 'funnyawm'@'localhost';
+CREATE USER 'funnyawm'@'%' IDENTIFIED BY '041128';
+GRANT ALL PRIVILEGES ON cms.* TO 'funnyawm'@'%';
