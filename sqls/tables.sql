@@ -14,7 +14,7 @@ CREATE TABLE student
     collegeId   INT COMMENT '学院',
     phoneNumber VARCHAR(15) COMMENT '手机',
     email       VARCHAR(20) COMMENT '邮箱',
-    avatar      VARCHAR(30) COMMENT '头像',
+    avatar      VARCHAR(255) COMMENT '头像',
     PRIMARY KEY (id),
     UNIQUE KEY userName (userName)
 ) ENGINE = InnoDB
@@ -32,7 +32,7 @@ CREATE TABLE teacher
     gender      TINYINT COMMENT '性别',
     phoneNumber VARCHAR(15) COMMENT '手机',
     email       VARCHAR(20) COMMENT '邮箱',
-    avatar      VARCHAR(30) COMMENT '头像',
+    avatar      VARCHAR(255) COMMENT '头像',
     PRIMARY KEY (id),
     UNIQUE KEY userName (userName)
 ) ENGINE = InnoDB
@@ -46,7 +46,7 @@ CREATE TABLE college
     id           INT NOT NULL AUTO_INCREMENT COMMENT '主键',
     name         VARCHAR(30) COMMENT '学院名称',
     collegeBio   LONGTEXT COMMENT '学院简介',
-    introPicture VARCHAR(30) COMMENT '图片',
+    introPicture VARCHAR(255) COMMENT '图片',
     PRIMARY KEY (id)
 ) ENGINE = InnoDB
   AUTO_INCREMENT = 87
@@ -60,7 +60,7 @@ CREATE TABLE profession
     collegeId     INT COMMENT '所属学院ID',
     name          VARCHAR(30) COMMENT '专业名称',
     professionBio LONGTEXT COMMENT '专业简介',
-    introPicture  VARCHAR(30) COMMENT '图片',
+    introPicture  VARCHAR(255) COMMENT '图片',
     PRIMARY KEY (id)
 ) ENGINE = InnoDB
   AUTO_INCREMENT = 97
@@ -80,7 +80,7 @@ CREATE TABLE competition
     level        TINYINT COMMENT '级别',
     organizer    VARCHAR(50) COMMENT '举办单位',
     host         VARCHAR(50) COMMENT '承办单位',
-    introPicture VARCHAR(30) COMMENT '图片',
+    introPicture VARCHAR(255) COMMENT '图片',
     PRIMARY KEY (id)
 ) ENGINE = InnoDB
   AUTO_INCREMENT = 77
