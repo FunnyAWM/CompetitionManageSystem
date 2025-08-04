@@ -6,7 +6,7 @@ CREATE TABLE student
 (
     id          INT         NOT NULL AUTO_INCREMENT COMMENT '主键',
     userName    VARCHAR(20) NOT NULL COMMENT '学生账号',
-    password    VARCHAR(20) NOT NULL COMMENT '密码',
+    password    VARCHAR(32) NOT NULL COMMENT '密码',
     name        VARCHAR(5) COMMENT '学生姓名',
     gender      TINYINT COMMENT '性别',
     studentId   VARCHAR(20) COMMENT '学号',
@@ -27,7 +27,7 @@ CREATE TABLE teacher
 (
     id          INT         NOT NULL AUTO_INCREMENT COMMENT '教师ID',
     userName    VARCHAR(20) NOT NULL COMMENT '账号',
-    password    VARCHAR(20) NOT NULL COMMENT '密码',
+    password    VARCHAR(32) NOT NULL COMMENT '密码',
     name        VARCHAR(5) COMMENT '姓名',
     gender      TINYINT COMMENT '性别',
     phoneNumber VARCHAR(15) COMMENT '手机',
@@ -134,5 +134,15 @@ CREATE TABLE award
     amount  INT COMMENT '奖金金额',
     detail  TEXT COMMENT '获奖明细',
     note    TEXT COMMENT '备注'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='获奖情况';
+
+DROP TABLE IF EXISTS administrator;
+
+CREATE TABLE administrator
+(
+    id      INT PRIMARY KEY AUTO_INCREMENT,
+    userName VARCHAR(10) NOT NULL COMMENT '管理员用户名',
+    password VARCHAR(32) NOT NULL COMMENT '管理员密码'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='获奖情况';
