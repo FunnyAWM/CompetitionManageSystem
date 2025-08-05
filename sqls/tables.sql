@@ -10,6 +10,7 @@ CREATE TABLE student
     name        VARCHAR(5) COMMENT '学生姓名',
     gender      TINYINT COMMENT '性别',
     studentId   VARCHAR(20) COMMENT '学号',
+    background  TINYINT COMMENT '学历（或学位）',
     grade       TINYINT COMMENT '年级',
     collegeId   INT COMMENT '学院',
     phoneNumber VARCHAR(15) COMMENT '手机',
@@ -89,8 +90,7 @@ CREATE TABLE team
     name           VARCHAR(30) NOT NULL COMMENT '队名',
     leader_id      INT COMMENT '领队教师ID',
     competition_id INT         NOT NULL COMMENT '所属竞赛',
-    members        JSON COMMENT '学生ID列表（JSON数组）',
-    status         TINYINT
+    members        JSON COMMENT '学生ID列表（JSON数组）'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='队伍';
 
@@ -136,7 +136,7 @@ DROP TABLE IF EXISTS administrator;
 
 CREATE TABLE administrator
 (
-    id      INT PRIMARY KEY AUTO_INCREMENT,
+    id       INT PRIMARY KEY AUTO_INCREMENT,
     userName VARCHAR(10) NOT NULL COMMENT '管理员用户名',
     password VARCHAR(32) NOT NULL COMMENT '管理员密码'
 ) ENGINE = InnoDB

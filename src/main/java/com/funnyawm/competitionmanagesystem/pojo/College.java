@@ -5,8 +5,9 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Administrator {
+public class College {
     int id;
-    String userName;
-    String password;
+    String name;
+    String bio;
+    String introPicture;
 }

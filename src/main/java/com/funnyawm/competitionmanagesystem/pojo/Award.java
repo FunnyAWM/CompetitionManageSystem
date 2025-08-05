@@ -5,8 +5,10 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Administrator {
+public class Award {
     int id;
-    String userName;
-    String password;
+    int teamId;
+    int amount;
+    String detail;
+    String note;
 }

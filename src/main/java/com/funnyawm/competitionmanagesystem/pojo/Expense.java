@@ -5,8 +5,11 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Administrator {
+public class Expense {
     int id;
-    String userName;
-    String password;
+    int teamId;
+    int budget;
+    int actualCost;
+    String fileUrl;
+    int status;
 }

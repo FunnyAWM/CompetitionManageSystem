@@ -5,8 +5,10 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Administrator {
+public class Profession {
     int id;
-    String userName;
-    String password;
+    int collegeId;
+    String name;
+    String bio;
+    String introPicture;
 }
